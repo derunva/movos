@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>movos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  	var getSum = function(){
+  		var result = 0;
+  		for (var i = 0; i < arguments.length; i++) {
+	    	result += arguments[i];
+		}
+		return result;
+  	}
+  	function getRandomInt(min, max) {
+	  return Math.floor(Math.random() * (max - min)) + min;
+	}
+  	function randColor(){
+  		return 'rgb('+getRandomInt(0,255)+','+getRandomInt(0,255)+','+getRandomInt(0,255)+')';
+  	}
+  	console.log(getSum(10,20));
+  	$(document).ready(function(){
+  		var links = document.getElementsByTagName('a');
+	  	var $links = $('a');
+	  	$links.css('color','red');
+	  	for(var i = 0; i < links.length ; i++){ var  a = 0
+	  		links[i].style.color = randColor();
+	  	}
+	  	console.log(links,$links);
+  		$('.bars').click(function(){
+  			if ($(this).is('.active')) {
+  				$(this).removeClass('active');
+  				$('.menu').slideUp(500);
+  			}else{
+  				$(this).addClass('active');
+  				$('.menu').slideDown(500);
+  			}
+  			
+  		})
+  	});
+
+  </script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="header__top clearfix">
+				Багатоканальний телефон: <a href="tel:+380979096922">+38 (097) 909-69-22</a>
+				<a class="pull-right-laptop" href="#">Наші контакти</a>
+			</div>
+			<div class="clearfix row row_header">
+				<div class="col-laptop-1-4 col-phablet-1-2">
+					<a class="logo" href="#">
+						<img src="images/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-laptop-1-4 col-phablet-1-2">
+					<div class="advantage">
+						<div class="advantage__icon">
+							<i class="icon icon_people"></i>
+						</div>
+						<div class="advantage__text vfix">
+							<span>
+								багаторічний досвід
+							</span>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-laptop-1-4 col-phablet-1-2">
+					<div class="advantage advantage_bg-1">
+						<div class="advantage__icon">
+							<i class="icon icon_dashboard"></i>
+						</div>
+						<div class="advantage__text vfix">
+							<span>
+								інтерактивні методи
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-laptop-1-4 col-phablet-1-2">
+					<div class="advantage advantage_bg-2">
+						<div class="advantage__icon">
+							<i class="icon icon_tie"></i>
+						</div>
+						<div class="advantage__text vfix">
+							<span>
+								індивідуальний підхід до кожного
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix row">
+			<div class="col-laptop-1-4">
+				<div class="bars">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="menu">
+					<ul>
+						<li>
+							<a href="#">Головна</a>
+						</li>
+						<li>
+							<a href="#">Про нас</a>
+						</li>
+						<li>
+							<a href="#">Послуги</a>
+						</li>
+						<li>
+							<a href="#">Англійська мова</a>
+						</li>
+						<li class="active">
+							<a href="components.html">Французька мова</a>
+							<ul>
+								<li>
+									<a href="#">Вивченя французької мови</a>
+								</li>
+								<li>
+									<a href="#">Індивідуальні курси</a>
+								</li>
+								<li>
+									<a href="#">Поглиблені курси</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="german.html">Німецька</a>
+							<ul>
+								<li>
+									<a href="#">Вивченя французької мови</a>
+								</li>
+								<li>
+									<a href="#">Індивідуальні курси</a>
+								</li>
+								<li>
+									<a href="#">Поглиблені курси</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Контакти</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-laptop-3-4">
+				<div class="c-text">
+					<h1>Найчастіші питання</h1>
+					<p>Скільки разів ви, ваші друзі, знайомі чи родичі починали вчити іноземну мову і через деякий час залишали справу «до кращих часів», бо поки що не виходить?</p>
+					<p>Скільки разів ви знали слова, аде боялися сказати: раптом щось не правильно?</p>
+					<p>Скільки разів ви просто не могли згадати таке просте і точно відоме вам слово?</p>
+					<p>І, як наслідок, страх, сором, комплекси «я ніколи не зможу вивчити іншу мову».</p>
+					<p>Що потрібно, щоб дійсно розмовляти іноземною мовою?</p>
+					<p style="color: blue">МЕТА! Ви повинні мати свою власну мету, для чтого вам потрібна іноземна мова.<br>
+					Мета повинна бути чітка й прозора, а головне — мати чіткі часові межі. Якщо у вас є мета — 80% успіху у вас в кишені.
+					</p>
+				</div>
+				<h2 class="subheading">
+					Колектив Мовного центру «МОВУС» працює для Вас, якщо Ви:
+				</h2>
+				<div class="clearfix row">
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+					<div class="col-laptop-1-3">
+						для чого потрібні курси
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer clearfix">
+			©2014 Мовус Всі права захищені.
+			<a class="pull-right-laptop" href="tel:+380979096922">+38 (097) 909-69-22</a>
+		</div>
+	</div>
+</body>
+</html>
